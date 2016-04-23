@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="public/css/main.css"/>
+    <meta charset="UTF-8">
+	<title>Manga</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="shortcut icon" type="image/x-icon" href="/public/img/soundcloud.png"/>
+
+    <!-- Libs -->
+    <script src="public/libs/js/jquery.min.js"></script>
+
+    <!-- Aplication -->
+    <script src="public/js/main.js"></script>
+
+
+</head>
+<body>
+    <!-----PAGINA PRINCIPAL----->
+    <div id="content">
+        <div id="asd0"></div>
+        <img id="firstImage" src="public/img/Color-Dragon-Ball-Z-manga.jpg">
+        <a class="colorY" id="signin">Sign in</a>
+        <a class="colorY" id="createaccount">Create account</a>
+        <input type="text" id="inputsearch" class="txt" placeholder="Search for mangas" required>
+        <img id="imgsearch" class="point" src="public/img/search.png">
+        <p id="asd2">or</p>
+        <a class="colorY" id="uploadyourown">Upload your own</a>
+        <img id="iconImage" src="public/img/icono.png">
+        <p id="asd4">MANGA POWER</p>
+        
+        <div id="logoutdiv"></div>
+        <a class="colorY" id="opclo">Log out</a>
+        
+        <div id="fondo">
+            
+            <!-- TABLA DE BUSQUEDA -->
+            
+            <table id="tabla">
+                <thead>
+                    <tr>
+                        <td>Nombre</td>
+                        <td>Apellido</td>
+                        <td>Cancion</td>
+                        <td>Descripcion</td>
+                        <td>Vistas</td>
+                        <td>Genero</td>
+                        <td>Reproductor</td>
+                    </tr>
+                </thead>
+                <tbody id="tbody">
+                </tbody>
+            </table>
+            
+        </div>
+    </div>
+    <!-------------------->
+    
+    <!-----MODAL PERFIL----->
+    <div id="perfil" class="pb">
+        
+    </div>
+    <!-----------------------> 
+
+    <!------MODAL SIGN IN----->
+    <div id="myModal1" class="modal">
+        <div class="centrar ventanas" id="asd5">
+            <div id="asd6">
+                <img src="public/img/icono.png" id="asd7">
+                <p id="asd8">MANGA POWER</p>
+                <p id="asd9">Sign in</p>
+            </div>
+            <a class="colorY" id="x">x</a>
+            <label for="signinEmail">
+                <p id="asd10">Your email address</p>
+            </label>
+            <input type="text" id="signinEmail" class="txt"/>
+            <img id="wrong" src="public/img/wrong.png">
+            <p id="wrongemail">Please enter your email address</p>
+
+            <p id="asd11">Your password</p>
+            <label for="signinPass">
+                <input type="password" maxlength="20" id="signinPass" class="txt"/>
+            </label>
+            <img id="check" src="public/img/check.png">
+            <img id="wrong1" src="public/img/wrong1.png">
+            <p id="wrongpass">Please enter your password</p>
+
+            <a class="colorY" id="signinContB">Sign in</a>
+            <a class="ghost" id="cancel">Cancel</a>
+
+            <div id="anuncio">
+                <p id="asd12">
+                    We couldn't sign you in, sure you had the right credentials?
+                </p>
+            </div>
+        </div>
+    </div>
+    <!----------------------->
+
+    <!------MODAL CREATE ACCOUNT----->
+    <div id="myModal2" class="modal">
+        <div class="centrar ventanas" id="asd13">
+            <div id="asd23">
+                <img src="public/img/icono.png" id="asd14">
+                <p id="asd15">MANGA POWER</p>
+                <p id="asd119">Create account</p>
+            </div>
+            <a class="colorY" id="x1">x</a>
+            <div id="style-2">
+                <p id="asd16">What's your first name?</p>
+                <label for="createaccountFN">
+                    <input type="text" id="createaccountFN" class="txt"/>
+                </label>
+                <img id="wrong2" src="public/img/wrong.png">
+                <p id="wrongfn">Please enter your first name</p>
+
+                <p id="asd17">What's your facebook?</p>
+                <label for="createaccountLN">
+                    <input type="text" id="createaccountLN" class="txt" />
+                </label>
+                <img id="wrong3" src="public/img/wrong1.png">
+                <p id="wrongln">Please enter your facebook</p>
+
+                <p id="asd18">When is your birthday?</p>
+                <label for="createaccountB">
+                    <input type="date" id="createaccountB" class="txt"/>
+                </label>
+                <img id="wrong4" src="public/img/wrong2.png">
+                <p id="wrongb">Please enter your birthday</p>
+
+                <p id="asd19">What's your email address?</p>
+                <label for="createaccountE">
+                    <input type="text" id="createaccountE" class="txt"/>
+                </label>
+                <img id="wrong5" src="public/img/wrong3.png">
+                <p id="wronge">Please enter your email address</p>
+
+                <p id="asd20">Enter a password</p>
+                <label for="createaccountP">
+                    <input type="password" maxlength="20" id="createaccountP" class="txt" />
+                </label>
+                <img id="wrong6" src="public/img/wrong4.png">
+                <img id="check1" src="public/img/check.png">
+                <p id="wrongpw">Please enter a password</p>
+                
+                <p id="asd2010">We want to know a little more about you , could you say something about your life?</p>
+                <textarea id="bio" rows="6" cols="41" ></textarea>
+                <img id="wrong11" src="public/img/wrong5.png">
+                <p id="wrongbio">Please tell us about yourself</p>
+                
+
+                <a class="colorY" id="caBotton">Create Account</a>
+                <a class="ghost" id="cancel1">Cancel</a>
+                <div id="asd21"></div>
+
+                <div id="anuncio2">
+                    <p id="asd22">
+                        This account already exist. Please use another email address.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!------------------------------->
+    
+    <!-----MODAL UPLOAD YOUR OWN----->
+    <div id="myModal3" class="modal">
+        <div class="centrar ventanas" id="asd113">
+            <div id="asd223">
+                <img src="public/img/soundcloud2.png" id="asd114">
+                <p id="asd115">MANGA POWER</p>
+                <p id="asd118">Upload your own</p>
+            </div>
+            <a class="colorY" id="x2">x</a>
+            <form id="uForm"> 
+            	<p id="asd201">Upload your track</p>
+            	<label for="song">
+                    <input type="file" id="song" name="song"/>
+                </label>
+                <img id="wrong7" src="public/img/wrong.png">
+                <p id="wrongtrack">Please enter your track</p>
+                
+                
+                <p id="asd202">What's the track's name?</p>
+                <label for="namesong">
+                    <input type= "text" id="namesong" name="namesong" class="txt"/>
+                </label>
+                <img id="wrong8" src="public/img/wrong1.png">
+                <p id="wrongns">Please enter name's song</p>
+                
+                <p id="asd203">Enter track's description</p>
+                <label for="descpsong">
+                    <input type="text" id="descpsong" name="descpsong" class="txt"/>
+                </label>
+                <img id="wrong9" src="public/img/wrong2.png">
+                <p id="wrongds">Please enter track's description</p>
+            	
+            	<p id="asd204">Select a track's tag</p>
+                <select id="tagsong" name="tagsong">
+                  <option value="blues">band</option>
+				  <option value="blues">blues</option>
+				  <option value="classical">classical</option>
+				  <option value="country">country</option>
+				  <option value="dance">dance</option>
+				  <option value="easy listening">easy listening</option>
+				  <option value="electronic">electronic</option>
+				  <option value="folk">folk</option>
+				  <option value="heavy metal">heavy metal</option>
+				  <option value="hip hop">hip hop</option>
+				  <option value="jazz">jazz</option>
+				  <option value="Latin">Latin</option>
+				  <option value="opera">opera</option>
+				  <option value="pop">pop</option>
+				  <option value="rap">rap</option>
+				  <option value="reggae">reggae</option>
+				  <option value="rock">rock</option>
+				  <option value="techno">techno</option>
+				  <option value="other">other</option>v
+				</select>
+                <img id="wrong10" src="public/img/wrong3.png">
+                <p id="wrongt">Please enter track's tag</p>
+            	5
+            	<a class="colorY" id="uBotton">Upload</a>
+                <a class="ghost" id="cancel2">Cancel</a>
+                <div id="asd221"></div>
+                
+                <div id="anuncio3">
+                    <p id="asd25">
+                        Could not upload your file. Try again.
+                    </p>
+                </div>
+            </form>
+     	 </div>
+    </div>	
+    <!-----------------------> 
+    
+    
+    
+    <!-----MODAL LOADING----->
+    <div id="loading" class="modal">
+        <div class="loader" id="asd24"></div>
+    </div>
+    <!-----------------------> 
+</body>
+</html>
