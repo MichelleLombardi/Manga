@@ -36,6 +36,7 @@ $(document).ready(function () {
     var caB = $("#createaccountB");// input  birthday del modal2
     var caE = $("#createaccountE");// input email del modal2
     var caP = $("#createaccountP");// input password del modal2
+    var caBio = $("#bio");// input biography del modal2
     var check2 = $("#check1"); //imagen check create account password
     var anuncio2 = $("#anuncio2");//div anuncion error signin
     
@@ -207,25 +208,26 @@ $(document).ready(function () {
 
                 console.log("Tratamos de hacer login: ");
                 $.ajax({
-                    url: "./login",
+                    url: "./api/login.php",
                     type: "POST",
                     data: {
                         email: signinEmail.val(),
                         pass: signinPass.val()
                     },
-                    success: function (data) {
+                    success: function (res) {
+                        var data = JSON.parse(res);
+                        console.log("hola");
                         if( !data.error ) {
                             setTimeout(function(){ 
 	                        	loading.css({display: "none"});
 	                            modal1.css({display: "none"});
-
 	                            localStorage.user = JSON.stringify(data);
 	                            console.log(data);
 	
 	                            signin.css({"display":"none"});
 	                            createaccount.css({"display":"none"});
 	                            logoutdiv.css({"display":"inline"});
-	                            logoutdiv.text(data.nombre+" "+data.apellido);
+	                            logoutdiv.text(data.nombre);
 	                            opclo.css({"display":"block"});
 	                            auxuluyo=1;
                             }, 5000);
@@ -331,16 +333,18 @@ $(document).ready(function () {
                             console.log("Tratamos de crear una cuenta: ");
                             //corroborar email
                             $.ajax({
-                                url: "./signup",
+                                url: "./api/signup.php",
                                 type: "POST",
                                 data: {
-                                    firstName: caFN.val(),  // input  firt name del modal2
-                                    lastName: caLN.val(),   // input last name del modal2
+                                    name: caFN.val(),  // input  firt name del modal2
+                                    facebook: caLN.val(),   // input last name del modal2
                                     birthday: caB.val(),    // input  birthday del modal2
                                     email: caE.val(),       // input email del modal2
-                                    pass: caP.val()         // input password del modal2
+                                    pass: caP.val(),        // input password del modal2
+                                    biography: caBio.val()  // input biography
                                 },
-                                success: function (data) {
+                                success: function (res) {
+                                    var data = JSON.parse(res);
                                     // Si no hay error
                                     if( !data.error ) {  // si el email no existe
                                         setTimeout(function(){
@@ -353,7 +357,7 @@ $(document).ready(function () {
                                             signin.css({"display":"none"});
             	                            createaccount.css({"display":"none"});
             	                            logoutdiv.css({"display":"inline"});
-            	                            logoutdiv.text(data.nombre+" "+data.apellido);
+            	                            logoutdiv.text(data.nombre);
             	                            opclo.css({"display":"block"});
             	                            auxuluyo=1;
                                             
@@ -882,7 +886,7 @@ $(document).ready(function () {
                         loading.css({display: "block"});
                         
                         $.ajax({
-                            url: './upload',
+                            url: './api/upload.php',
                             type: 'POST',
                             // Form data
                             //datos del formulario
@@ -1129,12 +1133,14 @@ $(document).ready(function () {
     console.log("Hay una sesion activa?:");
     if( user ) {
         $.ajax({
-            url: "./login",
+            url: "./api/login.php",
             method: "GET",
             headers: {
                 Authorization: user.token
             },
-            success: function (data) {
+            success: function (res) {
+                console.log(res);
+                var data = JSON.parse(res);
                 // Si no hay error
                 if( !data.error ) {
                     localStorage.user = JSON.stringify(data);
@@ -1143,7 +1149,7 @@ $(document).ready(function () {
                     signin.css({"display":"none"});
                     createaccount.css({"display":"none"});
                     logoutdiv.css({"display":"inline"});
-                    logoutdiv.text(data.nombre+" "+data.apellido);
+                    logoutdiv.text(data.nombre);
                     opclo.css({"display":"block"});
                     auxuluyo=1;
                 }
@@ -1171,9 +1177,11 @@ $(document).ready(function () {
     opclo.click(function() {
         console.log("Cerraremos la sesion:");
         $.ajax({
-            url: "./login",
+            url: "./api/login.php",
             method: "DELETE",
-            success: function (data) {
+            success: function (res) {
+                console.log(res);
+                var data = JSON.parse(res);
                 // Borramos el localstorage
                 if( !data.error ) {
                     localStorage.user = JSON.stringify(data);
@@ -1214,12 +1222,13 @@ $(document).ready(function () {
     searchButton.click(function() {
         console.log("Hacemos una busqueda:");
         $.ajax({
-            url: "./search",
+            url: "./api/search.php",
             method: "GET",
             data: {
                 data: search.val()
             },
-            success: function (data) {
+            success: function (res) {
+                var data = JSON.parse(res);
                 if( !data.error ) {
                     var arreglo = data.arr;
                     var tabla = $("#tbody").text("");
@@ -1241,12 +1250,13 @@ $(document).ready(function () {
                                 var id = songTag.className.replace("song", "");
                                 if( !sessionStorage[id] ) {
                                     $.ajax({
-                                        "url": "./view",
+                                        "url": "./api/view.php",
                                         "method": "POST",
                                         "data": {
                                             "id_media": id
                                         },
-                                        success: function (data) {
+                                        success: function (res) {
+                                            var data = JSON.parse(res);
                                             if( !data.error ) {
                                                 console.log("Oh, acabas de generar un view");
                                                 sessionStorage[id] = true;
@@ -1277,13 +1287,14 @@ $(document).ready(function () {
                             // Si hay una sesion activa hacemos like o disklike
                             if( localStorage.user ) {
                                 $.ajax({
-                                    "url": "./like",
+                                    "url": "./api/like.php",
                                     "method": "POST",
                                     "data": {
                                         "id_media": id_media,
                                         "like": checkbox.prop("checked")
                                     },
-                                    success: function (data) {
+                                    success: function (res) {
+                                        var data = JSON.parse(res);
                                         console.log("Like cargado");
                                         checkbox.removeAttr('disabled');
                                         checkbox.prop("checked", data.like);
@@ -1312,12 +1323,13 @@ $(document).ready(function () {
                         // Si hay una sesion activa habilitamos el boton de like
                         if( localStorage.user ) {
                             $.ajax({
-                                "url": "./like",
+                                "url": "./api/like.php",
                                 "method": "GET",
                                 "data": {
                                     "id_media": id_media
                                 },
-                                success: function (data) {
+                                success: function (res) {
+                                    var data = JSON.parse(res);
                                     console.log("Like cargado");
                                     checkbox.removeAttr('disabled');
                                     checkbox.prop("checked", data.like);
