@@ -648,12 +648,6 @@ body {
     width: 305px;
 }
 
-#namesong {
-    position: absolute;
-    top: 115px;
-    left: 33px;
-    width: 305px;
-}
 
 #wrong3 {
     display: none;
@@ -667,7 +661,7 @@ body {
 #wrong8 {
     display: none;
     position: absolute;
-    top: 147px;
+    top: 226px;
     left: 34px;
     width: 10px;
     height: 10px;
@@ -686,7 +680,7 @@ body {
 #wrongns {
     display: none;
     position: absolute;
-    top: 137px;
+    top: 216px;
     left: 46px;
     color: red;
     font-family: Arial, serif;
@@ -704,10 +698,10 @@ body {
 
 #asd203 {
     position: absolute;
-    top: 149px;
+    top: 225px;
     left: 33px;
     color: #330033;
-    font-family: Arial, serif;
+    font-family: Arial;
     font-size: 14px;
 }
 
@@ -722,9 +716,9 @@ body {
 
 #descpsong {
     position: absolute;
-    top: 184px;
+    top: 257px;
     left: 33px;
-    width: 305px;
+    width: 200px;
 }
 
 #wrong4 {
@@ -739,7 +733,7 @@ body {
 #wrong9 {
     display: none;
     position: absolute;
-    top: 222px;
+    top: 280px;
     left: 34px;
     width: 10px;
     height: 10px;
@@ -758,10 +752,10 @@ body {
 #wrongds {
     display: none;
     position: absolute;
-    top: 212px;
+    top: 270px;
     left: 46px;
     color: red;
-    font-family: Arial, serif;
+    font-family: Arial;
     font-size: 10px;
 }
 
@@ -776,11 +770,12 @@ body {
 
 #asd204 {
     position: absolute;
-    top: 225px;
+    top: 286px;
     left: 33px;
     color: #330033;
     font-family: Arial;
     font-size: 14px;
+    
 }
 
 #createaccountE {
@@ -792,7 +787,7 @@ body {
 
 #tagsong {
     position: absolute;
-    top: 257px;
+    top: 320px;
     left: 33px;
     width: 200px;
 }
@@ -809,7 +804,7 @@ body {
 #wrong10 {
     display: none;
     position: absolute;
-    top: 290px;
+    top: 345px;
     left: 34px;
     width: 10px;
     height: 10px;
@@ -847,7 +842,7 @@ body {
 #wrongt {
     display: none;
     position: absolute;
-    top: 280px;
+    top: 335px;
     left: 46px;
     color: red;
     font-family: Arial;
@@ -888,6 +883,24 @@ body {
 }
 
 #bio:focus{
+    background-color: white;
+    color: #484848;
+}
+
+#syp{
+    position: absolute;
+    top: 115px;
+    left: 33px;
+    color: black;
+    font-family: Arial;
+    font-size: 14px; 
+    border-radius: 4px;
+    border: 1px solid #DBE1EB;
+    padding: 5px 10px 5px 12px;
+    background-color: #E0E0E0;
+}
+
+#syp:focus{
     background-color: white;
     color: #484848;
 }
@@ -937,9 +950,9 @@ body {
 
 #uBotton {
     position: absolute;
-    width: 50px;
+    width: 47px;
     height: 15px;
-    top: 318px;
+    top: 370px;
     left: 283px;
 }
 
@@ -956,7 +969,7 @@ body {
     position: absolute;
     width: 46px;
     height: 16px;
-    top: 318px;
+    top: 370px;
     left: 197px;
     color: #330033;
     width: 50px;
@@ -971,7 +984,7 @@ body {
 
 #asd221 {
     position: absolute;
-    top: 340px;
+    top: 400px;
     width: 100%;
     height: 20px;
 }

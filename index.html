@@ -167,66 +167,52 @@
     <!-----MODAL UPLOAD YOUR OWN----->
     <div id="myModal3" class="modal">
         <div class="centrar ventanas" id="asd113">
-            <div id="asd223">
-                <img src="public/img/soundcloud2.png" id="asd114">
+            <div id="asd23">
+                <img src="public/img/icono.png" id="asd114">
                 <p id="asd115">MANGA POWER</p>
                 <p id="asd118">Upload your own</p>
             </div>
             <a class="colorY" id="x2">x</a>
             <form id="uForm"> 
-            	<p id="asd201">Upload your track</p>
+            	<p id="asd201">What's the manga's name?</p>
             	<label for="song">
-                    <input type="file" id="song" name="song"/>
+                    <input type="text" id="song" name="song" class="txt"/>
                 </label>
                 <img id="wrong7" src="public/img/wrong.png">
-                <p id="wrongtrack">Please enter your track</p>
+                <p id="wrongtrack">Please enter the manga's name</p>
                 
-                
-                <p id="asd202">What's the track's name?</p>
-                <label for="namesong">
-                    <input type= "text" id="namesong" name="namesong" class="txt"/>
-                </label>
+                <p id="asd202">Tell us about the synopsis</p>
+                    <textarea id="syp" name="namesong" rows="6" cols="41"></textarea>
                 <img id="wrong8" src="public/img/wrong1.png">
-                <p id="wrongns">Please enter name's song</p>
+                <p id="wrongns">Please enter the manga's sypnosis</p>
                 
-                <p id="asd203">Enter track's description</p>
-                <label for="descpsong">
-                    <input type="text" id="descpsong" name="descpsong" class="txt"/>
-                </label>
+                <p id="asd203">which is the state of the manga?</p>
+                <select id="descpsong" name="descpsong">
+                  <option value="unfinished">unfinished</option>
+				  <option value="completed">completed</option>
+				</select>
                 <img id="wrong9" src="public/img/wrong2.png">
-                <p id="wrongds">Please enter track's description</p>
+                <p id="wrongds">Please enter the manga's status</p>
             	
-            	<p id="asd204">Select a track's tag</p>
+            	<p id="asd204">Select a manga's genre</p>
                 <select id="tagsong" name="tagsong">
-                  <option value="blues">band</option>
-				  <option value="blues">blues</option>
-				  <option value="classical">classical</option>
-				  <option value="country">country</option>
-				  <option value="dance">dance</option>
-				  <option value="easy listening">easy listening</option>
-				  <option value="electronic">electronic</option>
-				  <option value="folk">folk</option>
-				  <option value="heavy metal">heavy metal</option>
-				  <option value="hip hop">hip hop</option>
-				  <option value="jazz">jazz</option>
-				  <option value="Latin">Latin</option>
-				  <option value="opera">opera</option>
-				  <option value="pop">pop</option>
-				  <option value="rap">rap</option>
-				  <option value="reggae">reggae</option>
-				  <option value="rock">rock</option>
-				  <option value="techno">techno</option>
-				  <option value="other">other</option>v
+                  <option value="nekketsu">nekketsu</option>
+				  <option value="spokon">spokon</option>
+				  <option value="gekiga">gekiga</option>
+				  <option value="mahō shōjo">mahō shōjo</option>
+				  <option value="harem">harem</option>
+				  <option value="mecha">mecha</option>
+				  <option value="jidaimono">jidaimono</option>
 				</select>
                 <img id="wrong10" src="public/img/wrong3.png">
-                <p id="wrongt">Please enter track's tag</p>
-            	<a class="colorY" id="uBotton">Upload</a>
+                <p id="wrongt">Please enter the manga's genre</p>
+            	<a class="colorY" id="uBotton">Create</a>
                 <a class="ghost" id="cancel2">Cancel</a>
                 <div id="asd221"></div>
                 
                 <div id="anuncio3">
                     <p id="asd25">
-                        Could not upload your file. Try again.
+                        Could not create your repository. Try again.
                     </p>
                 </div>
             </form>

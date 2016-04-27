@@ -99,7 +99,8 @@ $(document).ready(function () {
     //click en el boton uploadyourown
     var auxuluyo=0;
     uluyo.click(function(){
-    	if(auxuluyo==1){
+        modal3.css({display: "block"});
+    	/*if(auxuluyo==1){
     	    var vacio = "";
     	    song.val(vacio);
             wrongsi.css({display: "none"});
@@ -136,7 +137,7 @@ $(document).ready(function () {
                     check.css({display: "none"});
                 }
             }, 500);
-    	}
+    	}*/
     });
 
     //click en el boton create account
