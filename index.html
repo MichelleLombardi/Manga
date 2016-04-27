@@ -19,17 +19,18 @@
     <!-----PAGINA PRINCIPAL----->
     <div id="content">
         <div id="asd0"></div>
-        <img id="firstImage" src="public/img/Color-Dragon-Ball-Z-manga.jpg">
+        <img id="firstImage" src="public/img/manga4.jpg">
         <a class="colorY" id="signin">Sign in</a>
         <a class="colorY" id="createaccount">Create account</a>
         <input type="text" id="inputsearch" class="txt" placeholder="Search for mangas" required>
         <img id="imgsearch" class="point" src="public/img/search.png">
         <p id="asd2">or</p>
         <a class="colorY" id="uploadyourown">Upload your own</a>
-        <img id="iconImage" src="public/img/icono.png">
-        <p id="asd4">MANGA POWER</p>
-        
-        <div id="logoutdiv"></div>
+        <a class="ghost" id="caps">Add a volume</a>
+        <div id="titlediv">
+            <img id="iconImage" src="public/img/icono.png">
+            <p id="asd4">MANGA POWER</p>
+        </div>
         <a class="colorY" id="opclo">Log out</a>
         
         <div id="fondo">
@@ -213,6 +214,51 @@
                 <div id="anuncio3">
                     <p id="asd25">
                         Could not create your repository. Try again.
+                    </p>
+                </div>
+            </form>
+     	 </div>
+    </div>	
+    <!-----------------------> 
+    
+    <!-----MODAL UPLOAD YOUR OWN VOLUME----->
+    <div id="myModal5" class="modal">
+        <div class="centrar ventanas" id="asd113">
+            <div id="asd23">
+                <img src="public/img/icono.png" id="asd114">
+                <p id="asd115">MANGA POWER</p>
+                <p id="asd118">Upload volume</p>
+            </div>
+            <a class="colorY" id="x4">x</a>
+            <form id="vForm"> 
+            	<p id="asd291">What's the manga's volume's name?</p>
+            	<label for="volname">
+                    <input type="text" id="volname" name="volname" class="txt"/>
+                </label>
+                <img id="wrong20" src="public/img/wrong.png">
+                <p id="wrongvn">Please enter the manga's volume's name</p>
+                
+                <p id="asd292">Enter the name of the manga that owns this volume</p>
+                    <label for="mname">
+                    <input type="text" id="mname" name="maname" class="txt"/>
+                </label>
+                <img id="wrong21" src="public/img/wrong1.png">
+                <p id="wrongmname">Please enter the manga's name</p>
+                
+                <p id="asd293">Enter volumen</p>
+                <label for="volfile">
+                    <input type="file" id="volfile" name="volfile" multiple/>
+                </label>
+                <img id="wrong22" src="public/img/wrong2.png">
+                <p id="wrongvolfile">Please enter the volume</p>
+                
+            	<a class="colorY" id="vBotton">Upload</a>
+                <a class="ghost" id="cancel4">Cancel</a>
+                <div id="asd221"></div>
+                
+                <div id="anuncio5">
+                    <p id="asd25">
+                        Could not create your volume Try again.
                     </p>
                 </div>
             </form>

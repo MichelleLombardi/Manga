@@ -167,6 +167,14 @@ body {
     overflow-y: auto;
 }
 
+#vForm{
+    position: absolute;
+    width: 100%;
+    height: 305px;
+    border-radius: 4px;
+    top: 75px;
+}
+
 
 #asd {
     position: absolute;
@@ -192,7 +200,7 @@ body {
     left: 53px;
     width: 1240px;
     height: 464px;
-    opacity: 0.8;
+    /*opacity: 0.8;*/
 }
 
 #fondo {
@@ -254,6 +262,16 @@ body {
     height: 20px;
 }
 
+#caps{
+    position: absolute;
+    top: 372px;
+    left: 1065px;
+    width: 90px;
+    height: 20px;
+    color: white;
+    display: none;
+}
+
 
 #asd3 {
     position: absolute;
@@ -280,11 +298,12 @@ body {
     position: absolute;
     top: 40px;
     left: 156px;
-    color: white;
+    color: black;
     font-family: Arial, serif;
     font-size: 14px;
     letter-spacing: 2px;
 }
+
 
 #asd5 {
     width: 400px;
@@ -496,6 +515,17 @@ body {
     font-weight: bold;
 }
 
+#x4 {
+    position: absolute;
+    top:4px; 
+    left:367px;
+    -webkit-border-radius: 200px 200px 200px 200px;
+    -webkit-box-shadow: 1px 0 12px 1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 1px 0 12px 1px rgba(0, 0, 0, 0.75);
+    box-shadow: 1px 0 12px 1px rgba(0, 0, 0, 0.75);
+    font-weight: bold;
+}
+
 #asd13 {
     width: 400px;
     height: 380px;
@@ -571,6 +601,15 @@ body {
     font-size: 14px;
 }
 
+#asd291 {
+    position: absolute;
+    top: 10px;
+    left: 33px;
+    color: #330033;
+    font-family: Arial, serif;
+    font-size: 14px;
+}
+
 #createaccountFN {
     position: absolute;
     top: 43px;
@@ -579,6 +618,13 @@ body {
 }
 
 #song {
+    position: absolute;
+    top: 43px;
+    left: 33px;
+    width: 305px;
+}
+
+#volname {
     position: absolute;
     top: 43px;
     left: 33px;
@@ -595,6 +641,15 @@ body {
 }
 
 #wrong7 {
+    display: none;
+    position: absolute;
+    top: 78px;
+    left: 34px;
+    width: 10px;
+    height: 10px;
+}
+
+#wrong20 {
     display: none;
     position: absolute;
     top: 78px;
@@ -623,9 +678,28 @@ body {
     font-size: 10px;
 }
 
+#wrongvn {
+    display: none;
+    position: absolute;
+    top: 68px;
+    left: 46px;
+    color: red;
+    font-family: Arial, serif;
+    font-size: 10px;
+}
+
 #asd17 {
     position: absolute;
     top: 80px;
+    left: 33px;
+    color: #330033;
+    font-family: Arial, serif;
+    font-size: 14px;
+}
+
+#asd293 {
+    position: absolute;
+    top: 149px;
     left: 33px;
     color: #330033;
     font-family: Arial, serif;
@@ -641,6 +715,15 @@ body {
     font-size: 14px;
 }
 
+#asd292 {
+    position: absolute;
+    top: 80px;
+    left: 33px;
+    color: #330033;
+    font-family: Arial, serif;
+    font-size: 14px;
+}
+
 #createaccountLN {
     position: absolute;
     top: 115px;
@@ -648,6 +731,21 @@ body {
     width: 305px;
 }
 
+#mname {
+    position: absolute;
+    top: 115px;
+    left: 33px;
+    width: 305px;
+}
+
+#wrong21 {
+    display: none;
+    position: absolute;
+    top: 147px;
+    left: 34px;
+    width: 10px;
+    height: 10px;
+}
 
 #wrong3 {
     display: none;
@@ -668,6 +766,16 @@ body {
 }
 
 #wrongln {
+    display: none;
+    position: absolute;
+    top: 137px;
+    left: 46px;
+    color: red;
+    font-family: Arial, serif;
+    font-size: 10px;
+}
+
+#wrongmname {
     display: none;
     position: absolute;
     top: 137px;
@@ -705,9 +813,25 @@ body {
     font-size: 14px;
 }
 
+#asd1293 {
+    position: absolute;
+    top: 149px;
+    left: 33px;
+    color: #330033;
+    font-family: Arial, serif;
+    font-size: 14px;
+}
+
 
 
 #createaccountB {
+    position: absolute;
+    top: 184px;
+    left: 33px;
+    width: 305px;
+}
+
+#volfile {
     position: absolute;
     top: 184px;
     left: 33px;
@@ -730,6 +854,15 @@ body {
     height: 10px;
 }
 
+#wrong22 {
+    display: none;
+    position: absolute;
+    top: 222px;
+    left: 34px;
+    width: 10px;
+    height: 10px;
+}
+
 #wrong9 {
     display: none;
     position: absolute;
@@ -740,6 +873,16 @@ body {
 }
 
 #wrongb {
+    display: none;
+    position: absolute;
+    top: 212px;
+    left: 46px;
+    color: red;
+    font-family: Arial, serif;
+    font-size: 10px;
+}
+
+#wrongvolfile {
     display: none;
     position: absolute;
     top: 212px;
@@ -956,6 +1099,14 @@ body {
     left: 283px;
 }
 
+#vBotton {
+    position: absolute;
+    width: 47px;
+    height: 15px;
+    top: 250px;
+    left: 283px;
+}
+
 #cancel1 {
     position: absolute;
     width: 46px;
@@ -975,6 +1126,15 @@ body {
     width: 50px;
 }
 
+#cancel4 {
+    position: absolute;
+    width: 46px;
+    height: 16px;
+    top: 250px;
+    left: 197px;
+    color: #330033;
+    width: 50px;
+}
 #asd21 {
     position: absolute;
     top: 600px;
@@ -990,6 +1150,17 @@ body {
 }
 
 #anuncio2 {
+    display: none;
+    position: absolute;
+    top: 225px;
+    left: 25px;
+    height: 80px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 4px;
+    width: 345px;
+}
+
+#anuncio5 {
     display: none;
     position: absolute;
     top: 225px;
@@ -1058,6 +1229,7 @@ body {
     border-radius: 4px;
     
 }
+
 
 #logoutdiv:hover {
     cursor: pointer;

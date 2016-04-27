@@ -70,8 +70,13 @@ $(document).ready(function () {
 
     var perfil =$("#perfil");
     
-    var modal4 = $("#myModal4"); // modal comments
-    var x3 = $("#x3");// button x que cierra modal4
+    var modal5 = $("#myModal5"); // modal volumenes
+    var x4 = $("#x4");// button x que cierra modal5
+    var anuncio5 = $("anuncio5");
+    var vButton = $("#vBotton");
+    var cancel4 = $("#cancel4");
+    var caps = $("#caps");
+    
     
 
     //click en el boton signin
@@ -99,8 +104,7 @@ $(document).ready(function () {
     //click en el boton uploadyourown
     var auxuluyo=0;
     uluyo.click(function(){
-        modal3.css({display: "block"});
-    	/*if(auxuluyo==1){
+    	if(auxuluyo==1){
     	    var vacio = "";
     	    song.val(vacio);
             wrongsi.css({display: "none"});
@@ -137,7 +141,7 @@ $(document).ready(function () {
                     check.css({display: "none"});
                 }
             }, 500);
-    	}*/
+    	}
     });
 
     //click en el boton create account
@@ -172,8 +176,12 @@ $(document).ready(function () {
         }, 500);
     });
     
+    //click en el boton para anadir voloumenes
+    caps.click(function(){modal5.css({display: "block"})});
+    
     //click en el nombre de la persona logueada
-    logoutdiv.click(function(){perfil.css({display: "block"})});
+    logoutdiv.click(function(){perfil.css({display: "block"})
+                              });
 
     //click en el boton x del modal 1
     x.click(function () { modal1.css({display: "none"}); });
@@ -183,6 +191,10 @@ $(document).ready(function () {
     
     //click en el boton x del modal 3
     x2.click(function () { modal3.css({display: "none"}); });
+    
+    //click en el boton x del modal 5
+    x4.click(function () { modal5.css({display: "none"}); });
+
 
     //click en el boton canceldel modal1
     cancel.click(function () { modal1.css({display: "none"}); });
@@ -192,6 +204,9 @@ $(document).ready(function () {
     
     //click en el boton cancel del modal3
     cancel2.click(function () { modal3.css({display: "none"}); });
+    
+    //click en el boton cancel del modal5
+    cancel4.click(function () { modal5.css({display: "none"}); });
 
     //click en el boton sign in del modal1
     var vacio = "";
@@ -222,6 +237,7 @@ $(document).ready(function () {
                             setTimeout(function(){ 
 	                        	loading.css({display: "none"});
 	                            modal1.css({display: "none"});
+                                caps.css({display: "block"});}
 	                            localStorage.user = JSON.stringify(data);
 	                            console.log(data);
 	
@@ -1190,6 +1206,7 @@ $(document).ready(function () {
                     signin.css({"display":"block"});
                     createaccount.css({"display":"block"});
                     logoutdiv.css({"display":"none"});
+                    caps.css({display: "none"});}
                     opclo.css({"display":"none"});
                     auxuluyo=0;
                 }
@@ -1201,6 +1218,7 @@ $(document).ready(function () {
                     signin.css({"display":"block"});
                     createaccount.css({"display":"block"});
                     logoutdiv.css({"display":"none"});
+                    caps.css({display: "none"});}
                     opclo.css({"display":"none"});
                     auxuluyo=0;
                 }
@@ -1212,6 +1230,7 @@ $(document).ready(function () {
                 console.log("Hay una sesion activa?: no");
                 signin.css({"display":"block"});
                 createaccount.css({"display":"block"});
+                caps.css({display: "none"});}
                 logoutdiv.css({"display":"none"});
                 opclo.css({"display":"none"});
                 auxuluyo=0;
